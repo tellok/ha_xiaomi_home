@@ -11,11 +11,7 @@ on:
 
 jobs:
   check-rule-format:
-    runs-on:
-    - self-hosted
-    - tower
-    - ubuntu-latest
-    - tower-run-${{ github.run_id }}-${{ github.run_attempt }}
+    runs-on: ["self-hosted", "ubuntu-latest"]
     steps:
     - name: Checkout the repository
       uses: actions/checkout@v4

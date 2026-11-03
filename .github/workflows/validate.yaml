@@ -11,11 +11,7 @@ on:
 
 jobs:
   validate-hassfest:
-    runs-on:
-    - self-hosted
-    - tower
-    - ubuntu-latest
-    - tower-run-${{ github.run_id }}-${{ github.run_attempt }}
+    runs-on: ["self-hosted", "ubuntu-latest"]
     steps:
     - name: Checkout the repository
       uses: actions/checkout@v4
@@ -24,11 +20,7 @@ jobs:
       uses: home-assistant/actions/hassfest@master
 
   validate-hacs:
-    runs-on:
-    - self-hosted
-    - tower
-    - ubuntu-latest
-    - tower-run-${{ github.run_id }}-${{ github.run_attempt }}
+    runs-on: ["self-hosted", "ubuntu-latest"]
     steps:
     - name: Checkout the repository
       uses: actions/checkout@v4
@@ -39,11 +31,7 @@ jobs:
         category: integration
 
   validate-lint:
-    runs-on:
-    - self-hosted
-    - tower
-    - ubuntu-latest
-    - tower-run-${{ github.run_id }}-${{ github.run_attempt }}
+    runs-on: ["self-hosted", "ubuntu-latest"]
     steps:
     - name: Checkout the repository
       uses: actions/checkout@v4
@@ -58,11 +46,7 @@ jobs:
         pylint $(git ls-files '*.py')
 
   validate-setup:
-    runs-on:
-    - self-hosted
-    - tower
-    - ubuntu-latest
-    - tower-run-${{ github.run_id }}-${{ github.run_attempt }}
+    runs-on: ["self-hosted", "ubuntu-latest"]
     steps:
     - name: Checkout the repository
       uses: actions/checkout@v4
