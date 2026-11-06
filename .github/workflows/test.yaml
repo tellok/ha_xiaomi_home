@@ -11,7 +11,7 @@ on:
 
 jobs:
   check-rule-format:
-    runs-on: ["self-hosted", "ubuntu-latest"]
+    runs-on: "ubuntu-latest"
     steps:
     - name: Checkout the repository
       uses: actions/checkout@v4

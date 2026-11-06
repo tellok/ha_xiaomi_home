@@ -6,7 +6,7 @@ on:
 
 jobs:
   release-zip:
-    runs-on: ["self-hosted", "ubuntu-latest"]
+    runs-on: "ubuntu-latest"
     steps:
     - uses: actions/checkout@v4
 
